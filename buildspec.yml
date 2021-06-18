@@ -8,7 +8,7 @@ env:
 phases:
   install:
     runtime-versions:
-        nodejs: 10
+        nodejs: 12
     commands:
         - echo Installing source NPM dependencies...
         - npm install
@@ -16,7 +16,7 @@ phases:
   build:
     commands:
         - echo Build started 
-        - ng Build
+        - ng build
 artifacts:
     files:
         - '**/*'
