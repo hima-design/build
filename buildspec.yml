@@ -2,28 +2,36 @@ version: 0.2
 
 env:
     variables:
-        CACHE_CONTROL: "86400"
-        S3_BUCKET: "{{s3_bucket_url}}"
-        BUILD_FOLDER: "dist"
+        S3_BUCKET: "iqshiftbuild"
 phases:
-  install:
+install:
     runtime-versions:
-        nodejs: 12
+        nodejs: 10
     commands:
-      - echo Installing source NPM dependencies...
-      - npm install -y npm@latest
-      - npm install -g @angular/cli
-      - rm package-lock.json
-    pre_build:
-      commands:
-      - npm install
-  build:
+    - echo $CODEBUILD_SRC_DIR
+    - npm install -y npm@latest
+    - npm install -g @angular/cli
+    - rm package-lock.json
+pre_build:
     commands:
-      - echo Build started...
-      - ng build
-   
+    - npm install
+build:
+    commands:
+    - echo build started on `date`
+    - ng build
+    - ls -l -F
+post_build:
+    commands:
+            # Clear S3 bucket.
+            - aws s3 rm s3://${S3_BUCKET} --recursive
+            - echo S3 bucket is cleared.
+            - aws s3 cp dist/{iq-shift} s3://${S3_BUCKET} --recursive
+            - echo Build completed on `date`
 artifacts:
     files:
-        - '**/*'
-    base-directory: 'dist*'
+        - '/'
     discard-paths: yes
+    base-directory: 'dist*'
+cache:
+paths:
+    - node_modules/
