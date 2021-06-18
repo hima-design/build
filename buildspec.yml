@@ -28,8 +28,8 @@ post_build:
             - echo Build completed on `date`
 artifacts:
     files:
-        - '/'
-    discard-paths: yes
+        - '**/*'
     base-directory: 'dist*'
+    discard-paths: yes
 paths:
     - node_modules/
