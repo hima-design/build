@@ -1,0 +1,584 @@
+@mixin nb-overrides() {
+  // --------------------------------
+
+  nb-menu.side-menu:not(.context-menu)
+    > ul.menu-items:first-of-type
+    > li.menu-item:nth-last-of-type(1) {
+    bottom: 0;
+    position: fixed;
+  }
+
+  nb-menu.side-menu:not(.context-menu)
+    > ul.menu-items:first-of-type
+    > li.menu-item:nth-last-of-type(2) {
+    bottom: 50px;
+    position: fixed;
+    width: 100%;
+  }
+
+  // --------------------------------
+
+  nb-select.size-medium button {
+    padding: 0.4375rem 2.2rem 0.4375rem 1.125rem !important;
+
+    nb-icon {
+      right: 0.41rem !important;
+    }
+  }
+
+  nb-select {
+    min-width: 150px;
+  }
+
+  nb-option-list {
+    min-width: 200px !important;
+  }
+
+  app-menu-button-container {
+    position: fixed;
+    align-items: initial;
+    z-index: 0;
+  }
+
+  .operating-point-body {
+    .chart-contextRect {
+      display: none;
+    }
+
+    .chart-xAxisContext {
+      display: none;
+    }
+
+    app-menu-button-container {
+      position: fixed;
+      align-items: initial;
+      z-index: 0;
+    }
+
+    .chart-x.chart-brush {
+      display: none;
+    }
+
+    #context-0 {
+      display: none;
+    }
+
+    nb-card {
+      height: 100%;
+      margin-top: 2rem;
+
+      nb-card-body {
+        overflow: hidden;
+        div {
+          display: flex;
+          svg {
+            // width: 100%;
+            // align-self: stretch;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-link:first-of-type {
+    padding-left: 1rem;
+  }
+
+  // hide scrollbars - keep scrolling functionality:
+  .element::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  .element {
+    overflow: -moz-scrollbars-none;
+  }
+  .element {
+    -ms-overflow-style: none;
+  }
+
+  [id^="fingerprint"] {
+    svg text {
+      font-size: 1rem;
+    }
+  }
+
+  .diagram-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .stretch-container {
+    width: 100%;
+    padding-bottom: 75%;
+    position: relative;
+  }
+
+  .chart-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  nb-layout-column.asset-detail-navigation {
+    padding-top: 5px !important;
+    padding-left: 30px !important;
+  }
+
+  nb-layout-column.left {
+    padding: 0 !important;
+    max-width: 300px;
+    margin-right: 0.8rem;
+  }
+
+  nb-layout-column.chart-column {
+    padding: 0 !important;
+  }
+
+  nb-layout-header nav {
+    height: 3.75rem;
+    padding: 0.75rem;
+  }
+  nb-layout-header.fixed ~ .layout-container {
+    padding-top: 3.75rem;
+  }
+
+  button {
+    .menu-button.appearance-filled.size-tiny.status-primary.shape-rectangle.icon-start.icon-end.nb-transition {
+      background-color: white;
+    }
+  }
+
+  nb-card {
+    padding: 0;
+    align-self: flex-start;
+    filter: drop-shadow(3px 3px 7px #e5e5e9);
+
+    nb-card-header {
+      text-overflow: ellipsis;
+      overflow: hidden !important;
+      white-space: nowrap;
+    }
+    nb-card-body {
+      padding: 0;
+    }
+
+    .card-content {
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    .card {
+      min-height: 300px;
+    }
+  }
+
+  .health-condition {
+    .chart-xAxisContext,
+    .chart-contextRect,
+    .chart-brush,
+    #context-0 {
+      display: none !important;
+    }
+  }
+
+  .overview-body {
+    margin-top: 10px !important;
+  }
+
+  .nb-theme-siemens nb-route-tabset {
+    ul.route-tabset {
+      padding: 0 0 0 30px !important;
+    }
+  }
+
+  ul.route-tabset {
+    padding: 0 0 0 30px !important;
+    nb-tab {
+      padding: 40px 0 0 5px !important;
+    }
+  }
+  .nb-theme-siemens nb-tabset {
+    padding: 0 0 0 30px !important;
+    nb-tab {
+      padding: 18px 0 0 0px !important;
+    }
+  }
+
+  nb-tabset {
+    padding: 0 0 0 30px !important;
+    nb-tab {
+      padding: 18px 0 0 0px !important;
+    }
+  }
+
+  nb-toggle .toggle-switcher {
+    margin-top: -2.8px;
+    margin-left: -1px;
+  }
+
+  nb-toggle .toggle:not(.checked) .toggle-switcher {
+    background-color: #66667e;
+  }
+
+  nb-toggle[disabled] .toggle:not(.checked) .toggle-switcher {
+    background-color: rgb(
+      102,
+      102,
+      126,
+      0.2
+    ) !important; // Siemens-InteractiveBlueLightDefault
+  }
+
+  nb-toggle[disabled] .toggle.checked {
+    background-color: rgb(0, 215, 160, 0.2) !important; // Siemens-SoftGreen
+    border-color: rgb(0, 215, 160, 0.2) !important; // Siemens-SoftGreen
+  }
+
+  nb-badge {
+    padding: 0.15rem 0.3rem;
+  }
+
+  nb-badge.position-top {
+    top: 2px;
+  }
+  nb-badge.position-right {
+    right: 10px;
+  }
+
+  nb-card-body {
+    // padding-left: 24px;
+    // padding-right: 24px;
+    // padding-top: 16px;
+    // padding-bottom: 16px;
+  }
+  // nb-select {
+  // min-width: 10rem;
+  // }
+  img.asset-image {
+    max-width: 100px;
+    max-height: 100px;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  p.asset-path {
+    font-size: 0.8rem;
+  }
+
+  .ngx-asset-path {
+    padding: 0;
+    padding-top: 1rem;
+  }
+
+  .fp-selection--right {
+    padding: 0 !important;
+    padding-top: 2.3rem !important;
+  }
+  nb-tabset a.tab-link::before {
+    border: none;
+  }
+  .search-result-container {
+    box-shadow: 0 0.3rem 0.3rem 0 rgba(44, 51, 73, 0.3);
+  }
+
+  ngx-search-input {
+    z-index: 100;
+    box-shadow: 0 0.3rem 0.3rem 0 rgba(44, 51, 73, 0.3);
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid lightgray;
+
+    & input {
+      height: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+
+  .column-curtain::before {
+    background-color: aliceblue;
+  }
+
+  nb-tabset a.tab-link::before {
+    border: none;
+  }
+
+  table {
+    // font-size: 0.7rem;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  nb-route-tabset ul {
+    margin-bottom: 10px !important;
+  }
+
+  .route-tabset {
+    padding: 0;
+  }
+  td {
+    // border: 1px solid lightgray;
+    // width: 50%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 10px;
+    padding-left: 0px;
+    &:first-of-type {
+      width: 66%;
+    }
+  }
+
+  table.asset-data-table {
+    line-height: 1rem;
+  }
+
+  .hg-tooltip {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    background: rgba(0, 55, 77, 0.7);
+    color: #fff;
+    border-radius: 10px;
+  }
+
+  .filter-input {
+    max-width: 100% !important;
+    line-height: 0.8 !important;
+  }
+
+  .fp-selection--right {
+    padding: 0 !important;
+    padding-top: 2.3rem !important;
+  }
+
+  .legend-wrap {
+    .legend-labels {
+      background: transparent;
+    }
+  }
+
+  .advanced-pie-legend .legend-items-container .legend-items {
+    display: flex;
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .advanced-pie-legend .total-label {
+    font-size: 10px;
+  }
+
+  .advanced-pie-legend
+    .legend-items-container
+    .legend-items
+    .legend-item
+    .item-label {
+    font-size: 12px;
+  }
+
+  .advanced-pie-legend
+    .legend-items-container
+    .legend-items
+    .legend-item
+    .item-value {
+    font-size: initial;
+    margin-top: initial;
+  }
+
+  .advanced-pie-legend
+    .legend-items-container
+    .legend-items
+    .legend-item
+    .item-percent {
+    font-size: 11px;
+  }
+
+  svg.ngx-charts {
+    margin-bottom: 1rem !important;
+  }
+
+  .highcharts-background {
+    fill: transparent !important;
+  }
+
+  #operating-hours {
+    margin-left: -1.5rem;
+    .y-axis.left-axis {
+      visibility: hidden;
+    }
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+    height: 1.25rem;
+  }
+
+  // table filter placeholder
+  div.ng2-smart-filter input::placeholder {
+    color: transparent !important;
+  }
+
+  ng2-smart-table tr.ng2-smart-table-title th {
+    //margin-left: 0.7rem !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  ng2-smart-table thead tr.ng2-smart-filters th.severity {
+    padding-bottom: 0px !important;
+  }
+
+  ng2-smart-table nav.ng2-smart-pagination-nav .pagination {
+    border: none;
+    margin: 1rem;
+    li {
+      > span {
+        padding: 0.5rem 1rem;
+      }
+      a.ng2-smart-page-link.page-link {
+        padding: 0.5rem 1rem;
+      }
+      a {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #0098a6;
+      }
+      a:hover {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #00708c;
+      }
+    }
+  }
+
+  ng2-smart-table nav.ng2-smart-pagination-nav .pagination li:not(:last-child) {
+    border-right: white !important;
+  }
+
+  ng2-smart-table nav.ng2-smart-pagination-nav .pagination {
+    span.ng2-smart-page-link.page-link {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0098a6;
+      color: white;
+    }
+    span.ng2-smart-page-link.page-link:hover {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #00708c;
+      color: white;
+    }
+  }
+
+  ng2-smart-table th {
+    text-align: center;
+    border-right-style: none !important;
+    border-left-style: none !important;
+    border-top-style: none !important;
+    background-color: white;
+    &[ng2-st-checkbox-select-all] {
+      visibility: hidden;
+    }
+  }
+
+  ng2-smart-table tr {
+    &:nth-of-type(1) {
+      th {
+        border-top-style: none !important;
+      }
+    }
+    &:nth-of-type(2) {
+      th {
+        border-top-style: none !important;
+      }
+    }
+    td {
+      border-right-style: none !important;
+      border-left-style: none !important;
+      background-color: white !important;
+      padding: 0.7rem 0rem !important;
+      padding-left: 0.7rem !important;
+      line-height: 1rem;
+      // cursor: pointer;
+
+      &:first-of-type {
+        text-align: center;
+      }
+    }
+  }
+
+  .ng2-smart-filter {
+    input {
+      border-radius: 0px;
+      color: black;
+      border-color: #66667e;
+      border-style: none none solid none;
+      border-width: 0 0 2px 0;
+      :focus {
+        background-color: rgb(0, 152, 166, 0.2);
+        border-color: #0098a6;
+      }
+      :hover {
+        background-color: rgb(0, 152, 166, 0.2);
+        border-color: #00708c;
+      }
+      :active {
+        background-color: rgb(0, 152, 166, 0.2);
+        border-color: #0098a6;
+      }
+    }
+  }
+
+  .ng2-smart-sort-link.sort {
+    color: black;
+    font-weight: 700;
+  }
+
+  a[title="spacer"] {
+    visibility: hidden;
+  }
+
+  .ohlc-chart-chart-health-grade #brush-area-chart-health-grade {
+    display: none;
+  }
+
+  ngx-overview,
+  ngx-operational-efficiency {
+    min-width: 100%; // for firefox
+  }
+
+  #chart-state-trend {
+    width: 90% !important;
+  }
+
+  .state-group small.csValue {
+    margin: 0 !important;
+  }
+
+  ngx-reports nb-list-item {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  nb-radio {
+    padding-top: 0rem !important;
+    radio-basic-text-color {
+      text-basic-color: color("Siemens-InteractiveBlueLightDefault");
+    }
+  }
+  nb-radio.status-basic {
+    span.text {
+      margin-bottom: 0rem !important;
+    }
+  }
+
+  .state-trend {
+    overflow: hidden;
+  }
+
+  a[title='Log out'], a[title='Language'] {
+    .menu-icon, span {
+      color: lightgray !important;
+    }
+  }
+}

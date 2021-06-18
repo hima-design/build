@@ -1,0 +1,128 @@
+{
+
+  "menu":[
+    
+      {
+        "site": {
+          "id": "753be412-972d-4eb2-a559-7a8ed7ffed0e",
+          "sitename": "Wheatstone",
+          "latitude": 28.625569035762908,
+          "longitude": 77.21171853604822
+        },
+        "siteAssets": [
+          {
+            "assetid": "d940c946-b3a9-4a1c-9343-5ebdd4ca45b1",
+            "assetname": "VFD02",
+            "displayTag": "1C-6621, VFD 1EVF-14C22",
+            "drivetype": "GL150"
+          }
+        ]
+      },
+      {
+        "site": {
+          "id": "b7a6d398-217d-480f-895c-3138c9907545",
+          "sitename": "Gorgon",
+          "latitude": 18.522664653130622,
+          "longitude": 73.8437756743469
+        },
+        "siteAssets": [
+          {
+            "assetid": "540f2647-11e3-4524-8854-6d77550684a9",
+            "assetname": "VFD01",
+            "displayTag": "1C-6611, VFD 1EVF-14C21",
+            "drivetype": "GH180"
+          },
+          {
+            "assetid": "89de686e-e43b-4b34-9b79-0ba5fd8c7b08",
+            "assetname": "VFD01",
+            "displayTag": "1C-6611, VFD 1EVF-14C21",
+            "drivetype": "GH180"
+          }
+        ]
+      }
+    
+],
+"recommendation":[
+  {
+    "recommendationId": "2237d398-2101-4831-9b52-7e712cfd04fa",
+    "fmea": "42",
+    "rpn": 350,
+    "siteId": "753be412-972d-4eb2-a559-7a8ed7ffed0e",
+    "siteName": "Wheatstone",
+    "assetId": "540f2647-11e3-4524-8854-6d77550684a9",
+    "assetName": "VFD01",
+    "malfunction": "Loss of power from site feed causes loss of power to all internal water to air Heat Exchanger fans. Fans are used for circulating cooled air inside the cabinet.",
+    "proposedMeasures": "Redundant⁹ power feeds. Note: Fans are fed from Precharge Breaker (CB2)",
+    "implementationActionItems": "Add redundant⁹ power feeds",
+    "tools": [
+      
+    ],
+    "category": [
+      {
+        "categoryId": "65f562fb-dedd-4316-a3fb-96cc07fbae10",
+        "description": "Spare Parts"
+      },
+      {
+        "categoryId": "60c5eb0a-9982-43e8-b678-7e8a1d948a1f",
+        "description": "Service Parts"
+      }
+    ],
+    "availability": null,
+    "toolDetails": "TBD",
+    "manpower": "TBD",
+    "retrofitParts": "TBD",
+    "requiredTime": null,
+    "manpowerQualification": [
+      
+    ],
+    "startDate": null,
+    "endDate": null,
+    "spareParts": ""
+  },
+  {
+    "recommendationId": "335b16e5-cfac-433a-a224-4960515b7492",
+    "fmea": "31",
+    "rpn": 500,
+    "siteId": "753be412-972d-4eb2-a559-7a8ed7ffed0e",
+    "siteName": "Wheatstone",
+    "assetId": "540f2647-11e3-4524-8854-6d77550684a9",
+    "assetName": "VFD01",
+    "malfunction": "Failed Precharge Circuit components (M2, M3, M4, Resistor and Reactor) cause no precharge voltage. Precharge limits inrush current to power cells capacitors. The VFD cannot be energized without the precharge circuit",
+    "proposedMeasures": "Maintain M2, M3, M4, Resistor and Reactor spares",
+    "implementationActionItems": "Replace parts when they fail",
+    "tools": [
+      {
+        "toolsId": "2c2548d0-b4c7-4888-adcc-284516a78ce2",
+        "description": "Basic (Electrician, plumber set)"
+      }
+    ],
+    "category": [
+      {
+        "categoryId": "65f562fb-dedd-4316-a3fb-96cc07fbae10",
+        "description": "Spare Parts"
+      },
+      {
+        "categoryId": "fb2be0ae-4337-4b70-a2b6-5ed5b2c2bd5a",
+        "description": "Service"
+      }
+    ],
+    "availability": null,
+    "toolDetails": "Basic (Electrician)",
+    "manpower": "1",
+    "retrofitParts": null,
+    "requiredTime": null,
+    "manpowerQualification": [
+      {
+        "manpower_QualificationId": "9c0f534b-42e5-4e46-b52c-08b1e2efc06b",
+        "description": "Siemens FSR"
+      }
+    ],
+    "startDate": null,
+    "endDate": null,
+    "spareParts": "A5E02407615 - Circuit Breaker X 1"
+  }
+
+]
+
+
+}

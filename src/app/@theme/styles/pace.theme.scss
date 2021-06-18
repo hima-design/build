@@ -1,0 +1,23 @@
+/**
+ * @license
+ * Copyright Akveo. All Rights Reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ */
+@import "./themes.scss";
+
+$Siemens-InteractiveBlueLightHover: #00708c;
+
+@mixin ngx-pace-theme() {
+  .pace .pace-progress {
+    background: $Siemens-InteractiveBlueLightHover;
+  }
+
+  .pace .pace-progress-inner {
+    box-shadow: 0 0 10px $Siemens-InteractiveBlueLightHover,
+      0 0 5px $Siemens-InteractiveBlueLightHover;
+  }
+
+  .pace .pace-activity {
+    display: none;
+  }
+}
