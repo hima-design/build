@@ -3,7 +3,6 @@ version: 0.2
 env:
     variables:
         S3_BUCKET: "iqshiftbuild"
-phases:
 install:
     runtime-versions:
         nodejs: 10
