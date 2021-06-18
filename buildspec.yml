@@ -10,13 +10,18 @@ phases:
     runtime-versions:
         nodejs: 12
     commands:
-        - echo Installing source NPM dependencies...
-        - npm install
-        - npm install -g @angular/cli
+      - echo Installing source NPM dependencies...
+      - npm install -y npm@latest
+      - npm install -g @angular/cli
+      - rm package-lock.json
+    pre_build:
+      commands:
+      - npm install
   build:
     commands:
-        - echo Build started 
-        - ng build
+      - echo Build started...
+      - ng build --prod
+   
 artifacts:
     files:
         - '**/*'
